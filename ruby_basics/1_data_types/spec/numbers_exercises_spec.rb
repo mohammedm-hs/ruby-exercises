@@ -12,6 +12,10 @@ RSpec.describe 'Numbers Exercises' do
     it 'adds two negative numbers' do
       expect(add(-2, -3)).to eq(-5)
     end
+
+    it 'adds a negative and positive number' do
+      expect(add(-1,1)).to eq(0)
+    end
   end
 
   describe 'subtraction exercise' do
@@ -19,70 +23,79 @@ RSpec.describe 'Numbers Exercises' do
     it 'subtracts two numbers' do
       expect(subtract(5, 3)).to eq(2)
     end
+
+    it 'subtracts two negative numbers' do
+      expect(subtract(-1, -1)).to eq(0)
+    end
   end
 
   describe 'multiplication exercise' do
 
     # remove the 'x' from the line below to unskip the test
-    xit 'multiplies two numbers' do
+    it 'multiplies two numbers' do
       expect(multiply(5, 5)).to eq(25)
     end
+
+    it 'multiplies two negative numbers' do
+      expect(multiply(-1,-4)).to eq(4)
+    end
+
   end
 
   describe 'division exercise' do
 
-    xit 'divides two numbers' do
+    it 'divides two numbers' do
       expect(divide(25, 5)).to eq(5)
     end
   end
 
   describe 'modulus exercise' do
 
-    xit 'returns the remainder using modulo' do
+    it 'returns the remainder using modulo' do
       expect(remainder(25, 5)).to eq(0)
     end
 
-    xit 'returns the remainder when it is not 0' do
+    it 'returns the remainder when it is not 0' do
       expect(remainder(13, 5)).to eq(3)
     end
   end
 
   describe 'float exercise' do
 
-    xit 'returns a float' do
+    it 'returns a float' do
       expect(float_division(10, 2)).to eql(5.0)
     end
   end
 
   describe 'string to number exercise' do
 
-    xit 'returns an integer from a string' do
+    it 'returns an integer from a string' do
       expect(string_to_number('1')).to eq(1)
     end
 
-    xit 'returns a negative integer from a string' do
+    it 'returns a negative integer from a string' do
       expect(string_to_number('-5')).to eq(-5)
     end
   end
 
   describe 'even exercise' do
 
-    xit 'returns true when the number is even' do
+    it 'returns true when the number is even' do
       expect(even?(6)).to eq(true)
     end
 
-    xit 'returns false when the number is not even' do
+    it 'returns false when the number is not even' do
       expect(even?(5)).to eq(false)
     end
   end
 
   describe 'odd exercise' do
 
-    xit 'returns true when the number is odd' do
+    it 'returns true when the number is odd' do
        expect(odd?(9)).to eq(true)
     end
 
-    xit 'returns false when the number is not odd' do
+    it 'returns false when the number is not odd' do
        expect(odd?(6)).to eq(false)
     end
 
